@@ -1,0 +1,61 @@
+.banner {
+    background-image: url("../../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-position-x: center;
+    padding: 0 3%;
+    height: 51vw;
+    min-height: 264px;
+    min-width: 380px;
+    box-shadow: inset 0px 0px 300px 1008px rgba(0, 0, 0, 0.534);
+}
+
+.banner__info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner__info h1,
+.banner__info h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #F5F5F5;
+    font-weight: 400;
+}
+
+.banner__info h1 {
+
+    font-size: clamp(16px, 2vw, 60px);
+    background: #6BD1FF;
+    border-radius: 4px;
+    max-width: 296px;
+    width: 30%;
+    text-align: center;
+
+}
+
+.banner__info h2 {
+    margin-top: 3%;
+    font-size: clamp(14px, 1vw, 46px);
+}
+
+.banner__info span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: clamp(10px, 1vw, 18px);
+    color: #F5F5F5;
+    margin-top: 9px;
+}
+
+.banner__img {
+    width: 50%;
+    text-align: center;
+}
+
+.banner__img img {
+    width: 70%;
+    min-width: 200px;
+}
