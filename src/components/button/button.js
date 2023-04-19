@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Button = styled.button`
     font-weight: 600;
-    font-size: clamp(14px, 2vw, 21px);
+    font-size: clamp(12px, 1vw, 21px);
     color: #FFFFFF;
     border: solid 1px #FFFFFF;
     text-decoration: none;
@@ -11,6 +11,12 @@ export const Button = styled.button`
     background-color: transparent;
     cursor: pointer;
     font-family: 'Source Sans Pro', sans-serif;
+
+  
+@media screen and (max-width:900px) {
+
+    padding: 5px 30px;
+}
 
     ${props => props.$blue && css`
     background: #2A7AE4;

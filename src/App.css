@@ -1,0 +1,17 @@
+.app {
+    position: relative;
+    background-color: black;
+
+}
+
+
+
+.banner__carrousel {
+    position: absolute;
+    top: calc(45vw - 150px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+
+}

@@ -1,0 +1,45 @@
+.carrousel {
+
+    width: 100%;
+
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.carrousel__info {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #F5F5F5;
+
+
+}
+
+.carrousel__info h2 {
+    background: #69953B;
+    padding: 5px;
+    font-size: clamp(20px, 2vw, 35px);
+    font-weight: 400;
+}
+
+.carrousel__info span {
+    font-weight: 300;
+    font-size: clamp(12px, 1vw, 18px);
+}
+
+.carrousel__cards {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    gap: 22px;
+}
+
+.carrousel__iframe {
+    width: 20vw;
+    height: 12vw;
+    min-width: 150px;
+    min-height: 100px;
+}
