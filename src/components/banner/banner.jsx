@@ -1,6 +1,6 @@
+import ReactPlayer from "react-player"
 import "./banner.css"
-import banner from "../../assets/background.png"
-import Carrousel from "../carrousel/carrousel"
+
 
 export default function Banner() {
     return (
@@ -12,14 +12,14 @@ export default function Banner() {
                 <span>Esse desafio é uma brincadeira com os gêneros musicais relacionados com cada tecnologia </span>
             </div>
             <div className="banner__img">
-                <iframe
-                    className="banner__yt"
-                    src="https://www.youtube.com/embed/XvJWNjQD2Yc?controls=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    rel="0"></iframe>
+                <ReactPlayer width={"30vw"} height={"18vw"} style={{ minWidth: "170px", minHeight: "100px", borderRadius: "10px" }} playsinline playing config={{
+                    youtube: {
+                        playerVars: {
+                            rel: 0,
+                            fs: 0,
+                        },
+                    }
+                }} light url="https://youtu.be/XvJWNjQD2Yc" />
             </div>
         </section>
     )

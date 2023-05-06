@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Front End",
+        "description": "",
+        "color": "#6BD1FF",
+        "videos": [
+            "XvJWNjQD2Yc",
+            "olXlSsTJ3o8",
+            "fd3PJfv7SaY",
+            "YRNLudNXU_c",
+            "hjz6-opHCBc",
+            "FP7tSaxPNTA",
+            "iNLi7B4sX4Q",
+            "IWxYkoj3JHo"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Back End",
+        "description": "",
+        "color": "#9CD33B",
+        "videos": [
+            "Z6cONvRUFZQ"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Data Science",
+        "description": "",
+        "color": "#6B5BE2",
+        "videos": [
+            "tI55Zu9uZEM",
+            "f_ZuSn1sMx8"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Infra",
+        "description": "",
+        "color": "#FFBA05",
+        "videos": []
+    }
+]

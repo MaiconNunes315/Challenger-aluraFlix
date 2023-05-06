@@ -1,11 +1,18 @@
-.carrousel {
-
-    width: 100%;
-
-    padding: 0 40px;
+/* .carrousel {
+    margin-top: -8vw;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    width: 100%;
+    overflow: hidden;
+
+} */
+
+.carrousel__slide {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
 }
 
 .carrousel__info {
@@ -14,12 +21,14 @@
     align-items: center;
     font-family: 'Roboto', sans-serif;
     color: #F5F5F5;
+    margin-left: 40px;
 
 
 }
 
 .carrousel__info h2 {
     background: #69953B;
+    border-radius: 4px;
     padding: 5px;
     font-size: clamp(20px, 2vw, 35px);
     font-weight: 400;
@@ -32,14 +41,34 @@
 
 .carrousel__cards {
     display: flex;
-    width: 100%;
-    overflow: hidden;
-    gap: 22px;
+    scroll-behavior: smooth;
+    transition: all 2s;
+    padding: 0 40px;
+    width: max-content;
 }
 
-.carrousel__iframe {
-    width: 20vw;
+.video {
+    margin: 0 11px;
+
+}
+
+.left,
+.right {
+    position: absolute;
     height: 12vw;
-    min-width: 150px;
-    min-height: 100px;
+    bottom: 0;
+    font-size: 300%;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    min-height: 170px;
+
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 10px;
 }
