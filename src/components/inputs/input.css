@@ -1,0 +1,54 @@
+.input {
+    position: relative;
+    font-family: Roboto, sans-serif;
+    width: 100%;
+}
+
+.input label {
+    position: absolute;
+    padding-top: 3px;
+    font-weight: 300;
+    left: 9px;
+    font-size: 12px;
+
+    color: #E5E5E5;
+}
+
+.input input,
+select,
+textarea {
+    background-color: #53585D;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    color: #C2C2C2;
+}
+
+.input select {
+    padding: 10px 9px 10px 9px;
+}
+
+.input input {
+    padding: 18px 9px 2px 9px;
+}
+
+.input textarea {
+    resize: none;
+    height: 100px;
+    padding: 18px 9px;
+}
+
+
+
+
+
+.input input:focus {
+    border-bottom: 4px solid #2A7AE4;
+}
+
+.input textarea:focus {
+    border-bottom: 4px solid #2A7AE4;
+}

@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Button = styled.button`
     font-weight: 600;
-    font-size: clamp(12px, 1vw, 21px);
+    font-size: 21px;
     color: #FFFFFF;
     border: solid 1px #FFFFFF;
     text-decoration: none;
@@ -11,6 +11,11 @@ export const Button = styled.button`
     background-color: transparent;
     cursor: pointer;
     font-family: 'Source Sans Pro', sans-serif;
+    z-index: 1;
+
+    &:hover{
+        color: gray;
+    }
 
   
 @media screen and (max-width:900px) {
@@ -21,11 +26,24 @@ export const Button = styled.button`
     ${props => props.$blue && css`
     background: #2A7AE4;
     color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+
+    &:hover{
+    color:#FFFFFF;
+    background-color: #0762da;
+    }
     `}
 
     ${props => props.$gray && css`
     background: #9E9E9E;
     color: #000000E5;
+    border: none;
+    border-radius: 4px;
 
+    &:hover{
+    color:#000000E5;
+    background-color: gray;
+    }
     `}
 `

@@ -4,34 +4,35 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 27px 40px;
-    z-index: 1;
-    position: absolute;
     width: 100%;
-    top: 0;
+
 }
 
 .logo {
     max-width: 168.45px;
-    width: 100%;
+    width: 40vw;
 }
 
 
 
 .music {
     width: 5%;
-    min-width: 30px;
+    min-width: 50px;
     margin-left: 5px;
+}
+
+.hidden {
+    display: none;
 }
 
 
 @media screen and (max-width:800px) {
     header {
-        padding: 10px 40px;
+        text-align: center;
     }
 
-    .logo {
-        width: 100px;
+    header .newVideoButton {
+        display: none;
     }
-
 
 }

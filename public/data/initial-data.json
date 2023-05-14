@@ -1,0 +1,41 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "category": "Front end",
+      "descriptionCategory": "Aquele Dev tranquilo que coda curtindo um pagodin",
+      "color": "#6BD1FF",
+      "videos": [
+        {
+          "title": "Dilsinho - Ele ou Eu (Ao Vivo)",
+          "idVideo": "oFzFyEhL_vM",
+          "descriptionVideo": "#\"ELE OU EU\"(Rapha Lucas)\\n\n\nEu queria amar você /n\nMas é difícil entender /n\nSeu tempo, seu tempo /n\nVi que você tava online /n\nMas não quis mandar mensagem /n\nTá vendo? /n\nAlguém você tá respondendo /n /n\n\nDiz que anda ocupada /n\nMas não passa uma noite em casa /n\nBarzinho, resenha /n\nSe já tá com outro cara /n\nMe avisar não custa nada /n\nMentira bizarra /n\n/n\nQuem é seu amor, ele ou eu? /n\nFala na minha cara agora /n\nTudo que a gente viveu /n\nFoi de verdade ou da boca pra fora? /n\n/n\nQuem é seu amor, ele ou eu? /n\nIsso é o que me interessa /n\nSerá que ele te mereceu /n\nPorque tu gosta só de quem não presta /n"
+        }
+      ]
+    },
+    {
+      "category": "Back end",
+      "descriptionCategory": "Aquele Dev mais HardCore gosta de um rock em alguns momentos um pop",
+      "color": "#69953b",
+      "videos": [],
+      "id": 2
+    },
+    {
+      "category": "Marketing",
+      "descriptionCategory": "Esse curte demais um samba !",
+      "color": "#6b5be2",
+      "videos": [],
+      "id": 3
+    },
+    {
+      "category": "Infra",
+      "descriptionCategory": "Calmo como um budo tem que ser uma MPB",
+      "color": "#9cd33b",
+      "videos": [],
+      "id": 4
+    }
+  ],
+  "users": [
+    12345678
+  ]
+}

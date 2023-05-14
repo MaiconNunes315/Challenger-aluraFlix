@@ -1,12 +1,12 @@
-/* .carrousel {
+.carrousel {
     margin-top: -8vw;
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 100%;
     overflow: hidden;
-
-} */
+    margin-bottom: 60px;
+}
 
 .carrousel__slide {
     display: flex;
@@ -49,13 +49,25 @@
 
 .video {
     margin: 0 11px;
+    height: 14vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 130px;
+    max-width: 420px;
+}
 
+.slide {
+    min-width: 200px;
+    width: 100%;
+    height: 130%;
 }
 
 .left,
 .right {
     position: absolute;
-    height: 12vw;
+    height: 14vw;
     bottom: 0;
     font-size: 300%;
     border: none;
@@ -70,5 +82,5 @@
 }
 
 .right {
-    right: 10px;
+    right: 0;
 }

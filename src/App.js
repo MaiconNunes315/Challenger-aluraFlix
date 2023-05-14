@@ -1,42 +1,32 @@
 import "./reset.css";
 import "./App.css";
 import Header from "./components/header/header";
-import Banner from "./components/banner/banner";
 import Carrousel from "./components/carrousel/carrousel";
-import Footer from "./components/footer/footer";
-import { Routes } from "react-router-dom";
-import { useState, useEffect } from 'react'
-
+import { BrowserRouter, Link, Route, Router, Routes, useLocation } from "react-router-dom";
+import AddNewVideos from "./pages/NewVideos/addNewVideos";
+import AddNewCategory from "./pages/newCategory/addNewCategory";
+import FooterOurButton from "./components/footer/footerOurButton";
 
 function App() {
-  const [db, setDb] = useState([])
-
-  useEffect(() => {
-
-    async function getData() {
-      const response = await fetch("./data.json", { headers: { Accept: "Application/json" } })
-      const responseJson = await response.json()
-      setDb(responseJson)
-    }
-
-    getData()
 
 
-  }, [])
 
   return (
-    <div className="app">
+    <BrowserRouter>
+
       <Header />
-      <Banner />
+      <Routes>
+        <Route path="/" element={<Carrousel />} />
+        <Route path="add-new-videos" element={<AddNewVideos />} />
+        <Route path="add-new-category" element={<AddNewCategory />} />
 
-      {db.map((card, index) => (
-        <section key={card.id} className="carrousel">
-          <Carrousel name={card.name} id={index} style={{ backgroundColor: `${card.color}` }} description={card.description} videos={card.videos} color={card.color} />
-        </section>
-      ))}
 
-      <Footer />
-    </div>
+      </Routes>
+      <FooterOurButton />
+
+
+
+    </BrowserRouter>
   );
 }
 
