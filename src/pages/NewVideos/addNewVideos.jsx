@@ -89,7 +89,7 @@ export default function AddNewVideos() {
                 onChange={(event) => setDescription(event.target.value)}
             />
 
-            <Input type="text" required={true} title="Código de segurança"
+            <Input type="password" required={true} title="Código de segurança"
                 onChange={(event) => setIdUser(event.target.value)}
             />
 

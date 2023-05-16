@@ -2,14 +2,16 @@ import "./carrousel.css"
 import { useState, useEffect } from 'react'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import Banner from "../banner/banner";
+import ModalVideo from "../modal/modal";
 
 
 export default function Carrousel({ name, id, style, description, videos, color }) {
 
-    const baseUrl = "https://youtu.be/"
+    const baseUrl = "https://youtube.com/embed/"
     const baseUrlImg = "https://img.youtube.com/vi/"
     const [moveX, setMoveX] = useState(0);
     const [data, setData] = useState([])
+    const [handleId, setHandleId] = useState([]);
 
     useEffect(() => {
 
@@ -20,15 +22,32 @@ export default function Carrousel({ name, id, style, description, videos, color 
         }
 
         getData()
-
-
     }, [])
+
+
+
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = (id) => {
+        const filterData = data.map(({ videos }, index) => {
+            return videos.find(({ idVideo }) => idVideo === id)
+        })
+
+        const filterVideo = filterData.find(idVideo => idVideo != undefined)
+
+        setOpen(true);
+        setHandleId(filterVideo)
+
+    }
+    const handleClose = () => setOpen(false);
 
     return (
         <>
             <Banner />
+            <ModalVideo open={open} onClose={handleClose} videos={handleId} baseUrl={baseUrl} slide={data} />
             <div className="carrousel">
                 {data.map((slide, index) => (
+
                     slide.videos.length > 0 && (
                         <div key={slide.id} className="carrousel__slide" >
                             <div className="carrousel__info" >
@@ -71,22 +90,15 @@ export default function Carrousel({ name, id, style, description, videos, color 
                                         setMoveX(scroll)
                                     }
                                 }}
+
                             />
                             < div className="carrousel__cards" >
 
                                 {
                                     slide.videos.map(({ idVideo }) => (
-                                        <div key={idVideo} className="video" style={{ border: `solid 4px ${slide.color}` }}>
-                                            <img className="slide" src={`${baseUrlImg}${idVideo}/sddefault.jpg`} alt="imagem do video" />
-                                            {/* <ReactPlayer className="slide" width={"20vw"} height={"12vw"} style={{ minWidth: "200px", minHeight: "150px", border: `solid 4px ${slide.color}` }} playsinline playing config={{
-                                            youtube: {
-                                                playerVars: {
-                                                    rel: 0,
-                                                    fs: 0,
-                                                },
-                                            }
-                                        }} light url={`${baseUrl}${video}`} /> */}
 
+                                        <div key={idVideo} className="video" style={{ border: `solid 4px ${slide.color}` }}>
+                                            <img className="slide" onClick={() => handleOpen(idVideo)} src={`${baseUrlImg}${idVideo}/sddefault.jpg`} alt="imagem do video" />
                                         </div>
                                     ))
                                 }

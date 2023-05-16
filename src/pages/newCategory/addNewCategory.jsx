@@ -64,7 +64,7 @@ export default function AddNewCategory() {
             <Input type="text" title="Nome" required={true} onChange={(event) => setName(event.target.value)} />
             <TextArea placeholder="Descrição" onChange={(event) => setDescription(event.target.value)} />
             <Input type="color" title="Cor" required={true} value={color} onChange={(event) => setColor(event.target.value)} />
-            <Input type="text" title="Código de segurança" required={true} onChange={(event) => setUserId(event.target.value)} />
+            <Input type="password" title="Código de segurança" required={true} onChange={(event) => setUserId(event.target.value)} />
             <div className='buttons'>
                 <div className='firstButtons'>
                     <Button $blue >Salvar</Button>

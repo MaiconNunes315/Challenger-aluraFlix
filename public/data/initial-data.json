@@ -9,7 +9,27 @@
         {
           "title": "Dilsinho - Ele ou Eu (Ao Vivo)",
           "idVideo": "oFzFyEhL_vM",
-          "descriptionVideo": "#\"ELE OU EU\"(Rapha Lucas)\\n\n\nEu queria amar você /n\nMas é difícil entender /n\nSeu tempo, seu tempo /n\nVi que você tava online /n\nMas não quis mandar mensagem /n\nTá vendo? /n\nAlguém você tá respondendo /n /n\n\nDiz que anda ocupada /n\nMas não passa uma noite em casa /n\nBarzinho, resenha /n\nSe já tá com outro cara /n\nMe avisar não custa nada /n\nMentira bizarra /n\n/n\nQuem é seu amor, ele ou eu? /n\nFala na minha cara agora /n\nTudo que a gente viveu /n\nFoi de verdade ou da boca pra fora? /n\n/n\nQuem é seu amor, ele ou eu? /n\nIsso é o que me interessa /n\nSerá que ele te mereceu /n\nPorque tu gosta só de quem não presta /n"
+          "descriptionVideo": "## ELE OU EU (Rapha Lucas)\n\nEu queria amar você  \nMas é difícil entender   \n Seu tempo, seu tempo  \n Vi que você tava online  \n Mas não quis mandar mensagem  \n Tá vendo?  \n Alguém você tá respondendo  \n  \n Diz que anda ocupada  \n Mas não passa uma noite em casa  \n Barzinho, resenha  \n Se já tá com outro cara  \n Me avisar não custa nada  \n Mentira bizarra  \n  \n Quem é seu amor, ele ou eu?  \n Fala na minha cara agora  \n Tudo que a gente viveu  \n Foi de verdade ou da boca pra fora?  \n  \n Quem é seu amor, ele ou eu?  \n Isso é o que me interessa  \n Será que ele te mereceu  \n Porque tu gosta só de quem não presta  \n"
+        },
+        {
+          "title": "Ferrugem, Iza - Me Perdoa ",
+          "idVideo": "hjz6-opHCBc",
+          "descriptionVideo": "Letra:\n\nNossa, eu nem sei por onde começar\nMas vou falar\nEu sei que vai doer, vamos chorar\nMas eu já não te amo\nCalma, senta aqui\n      Não é fácil pra mim também sentir\n          A flor mudar de cor, virar capim\n          Mas acabou o encanto\n          Eu nunca fui santo\n          Mas eu\n          tinha vontade de voltar pra casa\n          Falo isso aos prantos\n          Mas não dá pra negar que o fogo virou brasa\n          Desesperador mas é melhor o fim\n          Pra não ter mais dor eu vou ter que partir\n          Me perdoa mas não vou voltar\n          Pode por alguém no meu lugar\n          Quem tá decidido dessa vez\n          Sou eu\n          Eu tô indo embora por nós dois\n          Sei que isso vai doer depois\n          Quem assume o risco dessa vez\n          Sou eu"
+        },
+        {
+          "title": "VITINHO - A Troco de Nada",
+          "idVideo": "7GN47AkzLgs",
+          "descriptionVideo": "A Troco de Nada é mais um single do Volume 1 do novo DVD do #VITINHO, \"TRAJETÓRIA\", gravado no Rio de Janeiro.   \n\n\nLETRA:\n\n\n   Ver você, bem assim tão despreocupada\nSuperou nosso fim, nem comenta nada\nDeu pra ver, pra você não foi tão difícil assim\n\nQuando eu terminei, estava apaixonada\nMinha atitude pra você, foi precipitada\nVer você com outro alguém\nMachucou demais em mim\n\nVocê pediu uma explicação\nDisse pra mim que nunca entendeu\nPorque dei um fim na nossa relação\nAgora que passou vou explicar o que aconteceu\n\nTeu telefone tocou, e eu atendi\nDe repente eu ouvi, uma voz: Oi amor, estou aqui\nComo isso pode acontecer?\nNão era eu que te ligava de madrugada\n\nPor muitas vezes pensei em atender\nMas eu te amava, confiava em você\nMas agora eu vejo o tempo que eu perdi\nPor alguém que me enganava a troco de nada"
+        },
+        {
+          "title": "Akatu - Complicado",
+          "idVideo": "8ynQHhRrad0",
+          "descriptionVideo": "Complicado - Akatu\n\nComplicado não te dar bom dia\nDurmo e acordo achando que o tempo parou\nO seu lado em nossa cama fria\nTá do jeito que você deixou\n\nComplicado as ultimas palavras\nAs ofensas no momento de explosão\nVer um sonho lindo criar asas\nMe excedi, te xinguei, sei que fui do céu ao chão\n\nEra uma briguinha\nE o que eu fiz?\nNunca perco linha\nSei que fui infeliz\n\nMas olha aqui, me arrependi\nSe precisar de um tempo, ok\nTem que voltar pro nosso lar urgente, fala o que eu já sei\n\nQue está chateada, que a magoei\nDecepcionada e triste\nMas diz que aí no seu peito\nVai me perdoar e acreditar que o amor existe\nChorei feito um louco, mas mereci\nPor nada te fiz sofrer\nDeus sabe que eu não viveria sem você\n"
+        },
+        {
+          "title": "Dilsinho, Sorriso Maroto - Mensagem Apagada",
+          "idVideo": "MLJh6dCQejY",
+          "descriptionVideo": "Mensagem Apagada \n(Dilsinho / Bruno Cardoso / Sérgio Jr. / Lelê)\n\nMensagem apagada \nMandei na hora errada \nMe arrependi \nEu te acordei\n\nSaudade não passa \nEu não esperava \nQue estivesse aí \nE quer saber o que apaguei?\n\nLembrei das nossas madrugadas \nQue gosta de dormir sem nada \nQue quando sonha fala e ri \nE nega diz que eu inventei\n\nOdeia dormir maquiada \nNão gosta da sua voz gravada \nSeus áudios eu salvei aqui \nPra ouvir eu não desapeguei\n\nA noite faz a dor ficar pior \nPerdoa se tá tarde e te acordei \nEu escrevi te amo e apaguei"
         }
       ]
     },
@@ -17,22 +37,85 @@
       "category": "Back end",
       "descriptionCategory": "Aquele Dev mais HardCore gosta de um rock em alguns momentos um pop",
       "color": "#69953b",
-      "videos": [],
+      "videos": [
+        {
+          "title": "CPM22 - Um Minuto Para O Fim Do Mundo",
+          "idVideo": "RsEeyZNiwUk"
+        }
+      ],
       "id": 2
     },
     {
       "category": "Marketing",
       "descriptionCategory": "Esse curte demais um samba !",
       "color": "#6b5be2",
-      "videos": [],
+      "videos": [
+        {
+          "title": "Jorge Aragão - Falsa consideração",
+          "idVideo": "aC1QBmYVMCc"
+        }
+      ],
       "id": 3
     },
     {
       "category": "Infra",
-      "descriptionCategory": "Calmo como um budo tem que ser uma MPB",
+      "descriptionCategory": "Calmo como um buda tem que ser uma MPB",
       "color": "#9cd33b",
-      "videos": [],
+      "videos": [
+        {
+          "title": "Djavan - Oceano",
+          "idVideo": "2kqdlAYNEzk"
+        }
+      ],
       "id": 4
+    },
+    {
+      "category": "Mobile",
+      "descriptionCategory": "Só um rap pra tranquilizar a mente de um dev mobile",
+      "color": "#FFBA05",
+      "videos": [
+        {
+          "title": "ConeCrewDiretoria - Pra Minha Mãe",
+          "idVideo": "aaP5Xr89e3E"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "category": "Inovation",
+      "descriptionCategory": "Todos os gêneros necessários para sua criatividade.",
+      "color": "#ff8c2a",
+      "videos": [
+        {
+          "title": "Charlie Brown Jr. - Só os Loucos Sabem",
+          "idVideo": "JRJj4z-prvM"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "category": "Ux",
+      "descriptionCategory": "Taca-le Sertanejo nessa caixinha! ",
+      "color": "#dc6ebe",
+      "videos": [
+        {
+          "title": "Marília Mendonça - Leão",
+          "idVideo": "tI55Zu9uZEM"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "category": "Data science",
+      "descriptionCategory": "Só Deus em suas vidas, toca um louvor pra ajudar.",
+      "color": "#9cd33b",
+      "videos": [
+        {
+          "title": "Fernanda Brum - Onde o Fogo Não Apaga",
+          "idVideo": "hWsD-UC0of8"
+        }
+      ],
+      "id": 8
     }
   ],
   "users": [
