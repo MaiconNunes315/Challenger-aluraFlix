@@ -3,28 +3,27 @@ import { useState, useEffect } from 'react'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import Banner from "../banner/banner";
 import ModalVideo from "../modal/modal";
+import { useGetData } from "../../hook/useDatas";
 
 
-export default function Carrousel({ name, id, style, description, videos, color }) {
-
+export default function Carrousel() {
+    const data = useGetData()
     const baseUrl = "https://youtube.com/embed/"
     const baseUrlImg = "https://img.youtube.com/vi/"
+
     const [moveX, setMoveX] = useState(0);
-    const [data, setData] = useState([])
     const [handleId, setHandleId] = useState([]);
+    const [filterData, setFilterData] = useState([])
+    const [videoFilter, setVideoFilter] = useState()
+    const [numberRandom, setNumberRandom] = useState()
 
     useEffect(() => {
+        setNumberRandom(Math.ceil(Math.random() * data.length))
+    }, [renderBanner])
 
-        async function getData() {
-            const response = await fetch("http://localhost:3030/category", { headers: { Accept: "Application/json" } })
-            const responseJson = await response.json()
-            setData(responseJson)
-        }
-
-        getData()
-    }, [])
-
-
+    function renderBanner() {
+        setFilterData(data.find(video => video.id === numberRandom))
+    }
 
     const [open, setOpen] = useState(false);
 
@@ -41,11 +40,13 @@ export default function Carrousel({ name, id, style, description, videos, color 
     }
     const handleClose = () => setOpen(false);
 
+
     return (
         <>
-            <Banner />
+
+            <Banner color={filterData.color} background={filterData.background} title={filterData.category} description={filterData.descriptionCategory} video={filterData.videos} />
             <ModalVideo open={open} onClose={handleClose} videos={handleId} baseUrl={baseUrl} slide={data} />
-            <div className="carrousel">
+            <div onLoad={renderBanner} className="carrousel">
                 {data.map((slide, index) => (
 
                     slide.videos.length > 0 && (

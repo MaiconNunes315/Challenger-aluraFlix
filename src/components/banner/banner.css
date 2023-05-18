@@ -29,7 +29,6 @@
 .banner__info h1 {
 
     font-size: clamp(16px, 2vw, 60px);
-    background: #6BD1FF;
     border-radius: 4px;
     max-width: 296px;
     width: 30%;
@@ -57,8 +56,11 @@
 
 .banner__yt {
     width: 30vw;
+    min-width: 220px;
+    min-height: 150px;
     height: 18vw;
     border-radius: 10px;
+    border: none;
 }
 
 @media screen and (max-width:1200px) {
@@ -92,9 +94,5 @@
         justify-content: center;
     }
 
-    .banner__yt {
-        width: 170px;
-        height: 100px;
-    }
 
 }

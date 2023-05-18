@@ -5,6 +5,7 @@
       "category": "Front end",
       "descriptionCategory": "Aquele Dev tranquilo que coda curtindo um pagodin",
       "color": "#6BD1FF",
+      "background": "https://www.baixarmusica.mus.br/app/wp-content/uploads/2019/08/baixar-musica-pagode.jpg",
       "videos": [
         {
           "title": "Dilsinho - Ele ou Eu (Ao Vivo)",
@@ -37,6 +38,7 @@
       "category": "Back end",
       "descriptionCategory": "Aquele Dev mais HardCore gosta de um rock em alguns momentos um pop",
       "color": "#69953b",
+      "background": "https://img.wallpapic-br.com/i2447-231-915/medium/discoteca-multidao-concerto-de-rock-show-imagem-de-fundo.jpg",
       "videos": [
         {
           "title": "CPM22 - Um Minuto Para O Fim Do Mundo",
@@ -49,6 +51,7 @@
       "category": "Marketing",
       "descriptionCategory": "Esse curte demais um samba !",
       "color": "#6b5be2",
+      "background": "https://i.pinimg.com/736x/36/4b/3a/364b3a6f6864440de1aadd1ae066b3c4.jpg",
       "videos": [
         {
           "title": "Jorge Aragão - Falsa consideração",
@@ -61,6 +64,7 @@
       "category": "Infra",
       "descriptionCategory": "Calmo como um buda tem que ser uma MPB",
       "color": "#9cd33b",
+      "background": "https://agenciasertao.com/wp-content/uploads/2021/06/19%C2%B0-Festival-de-Musica-Educadora-FM.jpg",
       "videos": [
         {
           "title": "Djavan - Oceano",
@@ -73,6 +77,7 @@
       "category": "Mobile",
       "descriptionCategory": "Só um rap pra tranquilizar a mente de um dev mobile",
       "color": "#FFBA05",
+      "background": "https://st.depositphotos.com/1202217/1864/i/450/depositphotos_18649911-stock-photo-graffiti-wall-with-music-notes.jpg",
       "videos": [
         {
           "title": "ConeCrewDiretoria - Pra Minha Mãe",
@@ -85,6 +90,7 @@
       "category": "Inovation",
       "descriptionCategory": "Todos os gêneros necessários para sua criatividade.",
       "color": "#ff8c2a",
+      "background": "https://img.lovepik.com/photo/40008/5592.jpg_wh860.jpg",
       "videos": [
         {
           "title": "Charlie Brown Jr. - Só os Loucos Sabem",
@@ -97,6 +103,7 @@
       "category": "Ux",
       "descriptionCategory": "Taca-le Sertanejo nessa caixinha! ",
       "color": "#dc6ebe",
+      "background": "https://www.setelagoasnoticias.com.br/sig/www/openged/conteudos/4317/004317_5a69f28f88ae0_sertanejo.jpg",
       "videos": [
         {
           "title": "Marília Mendonça - Leão",
@@ -109,6 +116,7 @@
       "category": "Data science",
       "descriptionCategory": "Só Deus em suas vidas, toca um louvor pra ajudar.",
       "color": "#9cd33b",
+      "background": "https://3.bp.blogspot.com/-Rsp6fk6nSDY/UF6zji2BPfI/AAAAAAAABdM/DezjRSyLJG0/s1600/Cruz9.jpg",
       "videos": [
         {
           "title": "Fernanda Brum - Onde o Fogo Não Apaga",
@@ -117,8 +125,5 @@
       ],
       "id": 8
     }
-  ],
-  "users": [
-    12345678
   ]
 }

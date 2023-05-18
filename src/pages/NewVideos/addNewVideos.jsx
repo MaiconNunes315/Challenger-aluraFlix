@@ -1,10 +1,12 @@
+import "./addNewVideos.css"
 import { Link } from "react-router-dom";
 import { Button } from "../../components/button/button";
 import Input from "../../components/inputs/input";
-import "./addNewVideos.css"
 import Select from "../../components/inputs/select";
 import TextArea from "../../components/inputs/textArea";
-import { useState, useEffect } from "react"
+import { useState } from "react"
+import { useGetData } from "../../hook/useDatas";
+import { putVideo } from "../../function/postVideoAndCategory";
 
 export default function AddNewVideos() {
     const [name, setName] = useState();
@@ -12,62 +14,17 @@ export default function AddNewVideos() {
     const [category, setCategory] = useState()
     const [description, setDescription] = useState()
     const [idUser, setIdUser] = useState()
-    const [options, setOptions] = useState([]);
-    const [users, setUsers] = useState([]);
 
-
-
-
-
-
-    useEffect(() => {
-        async function getData() {
-            const response = await fetch("http://localhost:3030/category");
-            const responseJson = await response.json();
-
-            setOptions(responseJson)
-        }
-        async function getUser() {
-            const getUser = await fetch("http://localhost:3030/users");
-            const user = await getUser.json()
-            setUsers(user);
-
-        }
-        getData()
-        getUser()
-    }, [])
+    const data = useGetData();
 
     return (
         <form
             onSubmit={async (event) => {
                 event.preventDefault()
-
-                const checkCategory = options.find((option) => option.category === category)
-                const checkUser = users.findIndex((users) => parseInt(users) === parseInt(idUser))
-
-                let video = checkCategory.videos.push({
-                    title: name,
-                    idVideo: linkVideo,
-                    descriptionVideo: description
-                })
-
-                if (checkUser === 0) {
-                    try {
-                        await fetch(`http://localhost:3030/category/${checkCategory.id}`, {
-                            method: "PUT",
-                            headers: { "Content-type": "application/json; charset=UTF-8" },
-                            body: JSON.stringify(checkCategory)
-                        })
-                        console.log(checkCategory)
-
-                    } catch (error) {
-                        console.log(error)
-                    }
-                } else {
-                    alert("Código de segurança incorreto")
-                }
+                await putVideo(data, category, name, linkVideo, description, idUser)
             }}
             className="newVideos">
+
             <h2 className="title">Novo Video</h2>
 
             <Input type="text" title="Titulo" required={true}
@@ -80,7 +37,7 @@ export default function AddNewVideos() {
             <Select name="Categoria" required={true}
                 onChange={(event) => setCategory(event.target.value)}
             >
-                {options.map(({ category, id }) => (
+                {data.map(({ category, id }) => (
                     <option key={id} value={category}>{category}</option>
                 ))}
             </Select>

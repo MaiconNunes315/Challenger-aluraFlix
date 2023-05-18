@@ -4,6 +4,8 @@ import "../NewVideos/addNewVideos.css"
 import TextArea from '../../components/inputs/textArea'
 import { Button } from '../../components/button/button'
 import { Table, Th, Td, Tr, Tbody } from '../../components/table/table'
+import { useGetData } from '../../hook/useDatas'
+import { postCategory } from '../../function/postVideoAndCategory'
 
 export default function AddNewCategory() {
     const [name, setName] = useState("");
@@ -11,26 +13,7 @@ export default function AddNewCategory() {
     const [color, setColor] = useState("#FFBA05");
     const [user, setUser] = useState();
     const [userId, setUserId] = useState();
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-
-        (async () => {
-            const res = await fetch("http://localhost:3030/category")
-            const resJson = await res.json();
-
-            setData(resJson);
-        })()
-
-        const getUser = async () => {
-            const getUsers = await fetch("http://localhost:3030/users");
-            const users = await getUsers.json()
-            setUser(users);
-        }
-
-        getUser()
-
-    }, [data.length])
+    const data = useGetData()
 
     const setCategory = {
         category: name,
@@ -39,26 +22,11 @@ export default function AddNewCategory() {
         "videos": []
     }
 
+
     return (
         <form className='newVideos' onSubmit={async (event) => {
-            event.preventDefault();
-            const checkUser = user.findIndex((users) => parseInt(users) === parseInt(userId))
-
-            if (checkUser === 0) {
-                try {
-                    await fetch("http://localhost:3030/category", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json; charset=UTF-8" },
-                        body: JSON.stringify(setCategory)
-                    })
-
-                } catch (error) {
-                    console.log(error)
-                }
-            } else {
-                alert("Usuário incorreto")
-            }
-
+            event.preventDefault()
+            await postCategory(userId, setCategory)
         }}>
             <h2 className='title'>Nova categoria</h2>
             <Input type="text" title="Nome" required={true} onChange={(event) => setName(event.target.value)} />
