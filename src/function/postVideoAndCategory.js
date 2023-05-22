@@ -9,17 +9,18 @@ export async function postCategory(userId, setCategory) {
                 headers: { "Content-Type": "application/json; charset=UTF-8" },
                 body: JSON.stringify(setCategory)
             })
-            return setCategory
+
+            alert("Cadastro realizado com sucesso")
         } catch (error) {
             return error
         }
     } else {
-        alert("Usuário incorreto")
+        alert("Código do usuário incorreto")
     }
 
 }
 
-export async function putVideo(data, category, name, linkVideo, description, userId) {
+export async function putVideo(data, category, name, linkVideo, description, userId, login) {
 
     const checkCategory = data.find((option) => option.category === category)
 
@@ -29,17 +30,19 @@ export async function putVideo(data, category, name, linkVideo, description, use
         descriptionVideo: description
     })
 
-    if (process.env.REACT_APP_USER == userId) {
+    if (process.env.REACT_APP_USER == userId || parseInt(category) !== 0) {
+
         try {
             await fetch(`http://localhost:3030/category/${checkCategory.id}`, {
                 method: "PUT",
                 headers: { "Content-type": "application/json; charset=UTF-8" },
                 body: JSON.stringify(checkCategory)
             })
-            console.log(checkCategory)
+
+            alert("Cadastro realizado com sucesso")
 
         } catch (error) {
-            console.log(error)
+            alert(error)
         }
     } else {
         alert("Código de segurança incorreto")

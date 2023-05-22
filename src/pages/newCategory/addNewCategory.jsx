@@ -6,6 +6,9 @@ import { Button } from '../../components/button/button'
 import { Table, Th, Td, Tr, Tbody } from '../../components/table/table'
 import { useGetData } from '../../hook/useDatas'
 import { postCategory } from '../../function/postVideoAndCategory'
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 
 export default function AddNewCategory() {
     const [name, setName] = useState("");
@@ -15,24 +18,51 @@ export default function AddNewCategory() {
     const [userId, setUserId] = useState();
     const data = useGetData()
 
-    const setCategory = {
-        category: name,
-        descriptionCategory: description,
-        color: color,
-        "videos": []
+
+
+    const schema = yup.object({
+        name: yup.string().required("Categoria é obrigatório").min(3, "Mínimo 3 caracteres"),
+        color: yup.string().required("Cor obrigatório").min(6, "Minimo 6 caracteres"),
+        password: yup.number().typeError("Senha do usuário obrigatória").required("Senha do usuário obrigatório").integer().min(6, "Minimo 6 caracteres"),
+        text: yup.string().required("Descrição é obrigatório")
+
+    }).required();
+
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema)
+    });
+
+    function submit(object) {
+        const setCategory = {
+            category: object.name,
+            descriptionCategory: object.text,
+            color: object.color,
+            "videos": []
+        }
+        postCategory(object.password, setCategory)
     }
 
-
     return (
-        <form className='newVideos' onSubmit={async (event) => {
-            event.preventDefault()
-            await postCategory(userId, setCategory)
-        }}>
+        <form className='newVideos' onSubmit={handleSubmit(submit)}>
             <h2 className='title'>Nova categoria</h2>
-            <Input type="text" title="Nome" required={true} onChange={(event) => setName(event.target.value)} />
-            <TextArea placeholder="Descrição" onChange={(event) => setDescription(event.target.value)} />
-            <Input type="color" title="Cor" required={true} value={color} onChange={(event) => setColor(event.target.value)} />
-            <Input type="password" title="Código de segurança" required={true} onChange={(event) => setUserId(event.target.value)} />
+            <Input type="text" title="Nome" name="name"
+                register={register}
+                errors={errors.name?.message}
+            />
+            <TextArea placeholder="Descrição" name="text"
+                register={register}
+                errors={errors.text?.message} />
+            <Input type="color" title="Cor" value={color} name="color"
+                register={register}
+                errors={errors.color?.message}
+            />
+
+            <Input type="password" name="password" title="Código de segurança"
+
+                register={register}
+                errors={errors.password?.message}
+            />
             <div className='buttons'>
                 <div className='firstButtons'>
                     <Button $blue >Salvar</Button>

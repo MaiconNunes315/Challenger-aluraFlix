@@ -52,3 +52,13 @@ textarea {
 .input textarea:focus {
     border-bottom: 4px solid #2A7AE4;
 }
+
+.input .error {
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0em;
+    color: #E53935;
+
+}
