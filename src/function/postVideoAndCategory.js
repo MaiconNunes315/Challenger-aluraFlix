@@ -20,13 +20,13 @@ export async function postCategory(userId, setCategory) {
 
 }
 
-export async function putVideo(data, category, name, linkVideo, description, userId, login) {
+export async function putVideo(data, category, name, linkVideo, description, userId) {
 
     const checkCategory = data.find((option) => option.category === category)
 
     let video = checkCategory.videos.push({
         title: name,
-        idVideo: linkVideo,
+        idVideo: linkVideo.slice(linkVideo.indexOf("watch?v=") + 8, linkVideo.indexOf("watch?v=") + 8 + 11),
         descriptionVideo: description
     })
 

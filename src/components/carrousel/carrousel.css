@@ -12,7 +12,9 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
     position: relative;
+
 }
 
 .carrousel__info {
@@ -27,7 +29,7 @@
 }
 
 .carrousel__info h2 {
-    background: #69953B;
+
     border-radius: 4px;
     padding: 5px;
     font-size: clamp(20px, 2vw, 35px);
@@ -41,28 +43,34 @@
 
 .carrousel__cards {
     display: flex;
+    align-items: center;
+    gap: 10px;
     scroll-behavior: smooth;
     transition: all 2s;
     padding: 0 40px;
-    width: max-content;
+    width: 100%;
+    overflow: hidden;
 }
 
 .video {
-    margin: 0 11px;
-    height: 14vw;
-    overflow: hidden;
+
+    height: 230px;
+    cursor: pointer;
+    overflow-y: hidden;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 130px;
-    max-width: 420px;
-    cursor: pointer;
+    min-width: 350px;
+    width: 350px;
 }
 
-.slide {
-    min-width: 200px;
+.imgVideo {
+    vertical-align: middle;
     width: 100%;
     height: 130%;
+
+
 }
 
 .left,
@@ -84,4 +92,12 @@
 
 .right {
     right: 0;
+}
+
+@media screen and (max-width:1000px) {
+    .video {
+        width: 250px;
+        min-width: 250px;
+        height: 170px;
+    }
 }

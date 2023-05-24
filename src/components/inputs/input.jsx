@@ -6,7 +6,7 @@ import * as yup from "yup";
 
 
 
-export default function Input({ title, type, value, onChange, name, errors, register }) {
+export default function Input({ onblur, title, type, value, onChange, name, errors, register }) {
 
     return (
         <div className="input">

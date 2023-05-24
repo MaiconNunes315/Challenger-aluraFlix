@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import Input from '../../components/inputs/input'
 import "../NewVideos/addNewVideos.css"
 import TextArea from '../../components/inputs/textArea'
@@ -9,14 +9,15 @@ import { postCategory } from '../../function/postVideoAndCategory'
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import DataContext from '../../contexts/dataContext'
 
 export default function AddNewCategory() {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [color, setColor] = useState("#FFBA05");
     const [user, setUser] = useState();
-    const [userId, setUserId] = useState();
-    const data = useGetData()
+
+    const data = useContext(DataContext)
 
 
 
@@ -83,11 +84,19 @@ export default function AddNewCategory() {
                             <Td>{category}</Td>
                             <Td>{descriptionCategory}</Td>
                             <Td className='button'>Editar</Td>
-                            <Td className='button' onClick={async (event) => {
-                                await fetch(`http://localhost:3030/category/${id}`, {
-                                    method: "DELETE",
-                                    headers: { "Content-Type": "application/json; charset=UTF-8" },
-                                })
+                            <Td className='button' onClick={async () => {
+
+                                const userId = prompt("digite o id do usuário")
+
+                                if (parseInt(userId) === parseInt(process.env.REACT_APP_USER)) {
+                                    await fetch(`http://localhost:3030/category/${id}`, {
+                                        method: "DELETE",
+                                        headers: { "Content-Type": "application/json; charset=UTF-8" },
+                                    })
+                                } else {
+                                    alert("senha invalida ou não digitada")
+                                }
+
                             }}>Remover</Td>
                         </Tr>
                     ))}

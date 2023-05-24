@@ -6,27 +6,31 @@ import { BrowserRouter, Link, Route, Router, Routes, useLocation } from "react-r
 import AddNewVideos from "./pages/NewVideos/addNewVideos";
 import AddNewCategory from "./pages/newCategory/addNewCategory";
 import FooterOurButton from "./components/footer/footerOurButton";
+import DataContext from "./contexts/dataContext";
+import { useGetData } from "./hook/useDatas";
 
 function App() {
 
-
+  const data = useGetData()
 
   return (
-    <BrowserRouter>
+    <DataContext.Provider value={data}>
+      <BrowserRouter>
 
-      <Header />
-      <Routes>
-        <Route path="/" element={<Carrousel />} />
-        <Route path="add-new-videos" element={<AddNewVideos />} />
-        <Route path="add-new-category" element={<AddNewCategory />} />
-
-
-      </Routes>
-      <FooterOurButton />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Carrousel />} />
+          <Route path="add-new-videos" element={<AddNewVideos />} />
+          <Route path="add-new-category" element={<AddNewCategory />} />
 
 
+        </Routes>
+        <FooterOurButton />
 
-    </BrowserRouter>
+
+
+      </BrowserRouter>
+    </DataContext.Provider>
   );
 }
 
