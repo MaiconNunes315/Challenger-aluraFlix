@@ -3,21 +3,16 @@ import { useState, useEffect, useRef, useContext } from 'react'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import Banner from "../banner/banner";
 import ModalVideo from "../modal/modal";
-import { useGetData } from "../../hook/useDatas";
 import DataContext from "../../contexts/dataContext";
 
 
+
 export default function Carrousel() {
-    //const data = useGetData()
     const baseUrl = "https://youtube.com/embed/"
     const baseUrlImg = "https://img.youtube.com/vi/"
     const data = useContext(DataContext)
-
-
-    const [moveX, setMoveX] = useState();
     const [handleId, setHandleId] = useState([]);
     const [filterData, setFilterData] = useState([])
-    const [videoFilter, setVideoFilter] = useState()
     const [numberRandom, setNumberRandom] = useState()
     const carousel = useRef(null)
 
@@ -47,17 +42,19 @@ export default function Carrousel() {
     const handleLeftClick = (index) => {
         const element = carousel.current.children[index].lastChild
         const moveElement = element.offsetWidth;
-        element.scrollBy(moveElement, 0)
+        element.scrollBy(-moveElement, 0)
     };
 
     const handleRightClick = (index) => {
         const element = carousel.current.children[index].lastChild
         const moveElement = element.offsetWidth;
-        element.scrollBy(-moveElement, 0)
+        element.scrollBy(moveElement, 0)
     };
 
 
     return (
+
+
         <>
 
             <Banner color={filterData.color} background={filterData.background} title={filterData.category} description={filterData.descriptionCategory} video={filterData.videos} />
@@ -98,7 +95,6 @@ export default function Carrousel() {
 
                 ))}
             </div>
-
         </>
 
     )

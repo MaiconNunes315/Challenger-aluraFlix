@@ -4,7 +4,6 @@ import "../NewVideos/addNewVideos.css"
 import TextArea from '../../components/inputs/textArea'
 import { Button } from '../../components/button/button'
 import { Table, Th, Td, Tr, Tbody } from '../../components/table/table'
-import { useGetData } from '../../hook/useDatas'
 import { postCategory } from '../../function/postVideoAndCategory'
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -12,11 +11,9 @@ import * as yup from "yup";
 import DataContext from '../../contexts/dataContext'
 
 export default function AddNewCategory() {
-    const [name, setName] = useState("");
-    const [description, setDescription] = useState("");
-    const [color, setColor] = useState("#FFBA05");
-    const [user, setUser] = useState();
 
+
+    const [color, setColor] = useState("#FFBA05");
     const data = useContext(DataContext)
 
 

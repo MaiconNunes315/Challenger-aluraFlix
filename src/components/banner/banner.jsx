@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react"
 import "./banner.css"
-import { useGetData } from "../../hook/useDatas"
-import { filterVideos } from "../../function/postVideoAndCategory"
 
 export default function Banner({ color, title, description, video, titleVideo, background }) {
     const baseUrl = "https://youtube.com/embed/"
