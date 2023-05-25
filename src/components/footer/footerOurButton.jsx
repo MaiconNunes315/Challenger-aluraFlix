@@ -5,7 +5,7 @@ import { Footer } from './footer';
 import { useState } from "react"
 
 import logo from '../../assets/logo.png'
-import styled from 'styled-components';
+
 
 export default function FooterOurButton() {
     const location = useLocation();

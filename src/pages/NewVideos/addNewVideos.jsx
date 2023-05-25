@@ -4,7 +4,7 @@ import { Button } from "../../components/button/button";
 import Input from "../../components/inputs/input";
 import Select from "../../components/inputs/select";
 import TextArea from "../../components/inputs/textArea";
-import { useState, useEffect, useContext } from "react"
+import { useState, useContext } from "react"
 import { putVideo } from "../../function/postVideoAndCategory";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
