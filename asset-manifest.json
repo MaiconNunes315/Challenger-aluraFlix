@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Challenger-aluraFlix/static/css/main.ff4c07df.css",
+    "main.js": "/Challenger-aluraFlix/static/js/main.1e71ba31.js",
+    "static/js/787.50884eed.chunk.js": "/Challenger-aluraFlix/static/js/787.50884eed.chunk.js",
+    "static/media/music.png": "/Challenger-aluraFlix/static/media/music.cf96e0adb0acf9bbf393.png",
+    "index.html": "/Challenger-aluraFlix/index.html",
+    "main.ff4c07df.css.map": "/Challenger-aluraFlix/static/css/main.ff4c07df.css.map",
+    "main.1e71ba31.js.map": "/Challenger-aluraFlix/static/js/main.1e71ba31.js.map",
+    "787.50884eed.chunk.js.map": "/Challenger-aluraFlix/static/js/787.50884eed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff4c07df.css",
+    "static/js/main.1e71ba31.js"
+  ]
+}
