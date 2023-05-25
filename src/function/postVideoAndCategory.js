@@ -2,7 +2,7 @@
 
 export async function postCategory(userId, setCategory) {
 
-    if (process.env.REACT_APP_USER === userId) {
+    if (parseInt(process.env.REACT_APP_USER) === userId) {
         try {
             await fetch("https://json-server-aluraflix.vercel.app/category", {
                 method: "POST",
@@ -30,7 +30,7 @@ export async function putVideo(data, category, name, linkVideo, description, use
         descriptionVideo: description
     })
 
-    if (process.env.REACT_APP_USER === userId || parseInt(category) !== 0) {
+    if (parseInt(process.env.REACT_APP_USER) === userId || parseInt(category) !== 0) {
 
         try {
             await fetch(`https://json-server-aluraflix.vercel.app/category/${checkCategory.id}`, {
