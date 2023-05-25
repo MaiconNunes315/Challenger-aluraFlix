@@ -1,10 +1,10 @@
-import { useGetData } from "../hook/useDatas"
+
 
 export async function postCategory(userId, setCategory) {
 
-    if (process.env.REACT_APP_USER == userId) {
+    if (process.env.REACT_APP_USER === userId) {
         try {
-            await fetch("http://localhost:3030/category", {
+            await fetch("https://json-server-aluraflix.vercel.app/category", {
                 method: "POST",
                 headers: { "Content-Type": "application/json; charset=UTF-8" },
                 body: JSON.stringify(setCategory)
@@ -24,16 +24,16 @@ export async function putVideo(data, category, name, linkVideo, description, use
 
     const checkCategory = data.find((option) => option.category === category)
 
-    let video = checkCategory.videos.push({
+    checkCategory.videos.push({
         title: name,
         idVideo: linkVideo.slice(linkVideo.indexOf("watch?v=") + 8, linkVideo.indexOf("watch?v=") + 8 + 11),
         descriptionVideo: description
     })
 
-    if (process.env.REACT_APP_USER == userId || parseInt(category) !== 0) {
+    if (process.env.REACT_APP_USER === userId || parseInt(category) !== 0) {
 
         try {
-            await fetch(`http://localhost:3030/category/${checkCategory.id}`, {
+            await fetch(`https://json-server-aluraflix.vercel.app/category/${checkCategory.id}`, {
                 method: "PUT",
                 headers: { "Content-type": "application/json; charset=UTF-8" },
                 body: JSON.stringify(checkCategory)

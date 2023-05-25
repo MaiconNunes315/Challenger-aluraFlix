@@ -7,7 +7,7 @@ export function useGetData() {
     useEffect(() => {
 
         async function getData() {
-            const response = await fetch("http://localhost:3030/category", {
+            const response = await fetch("https://json-server-aluraflix.vercel.app/category", {
                 headers: { Accept: "Application/json" },
             })
 
